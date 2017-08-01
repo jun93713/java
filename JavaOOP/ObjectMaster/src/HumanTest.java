@@ -1,9 +1,10 @@
 public class HumanTest {
     public static void main(String[] args) {
-        Human jun = new Human();
-        Human kevinke = new Human();
+        Samurai jun = new Samurai();
+        Samurai derek = new Samurai();
+        Ninja kevinke = new Ninja();
 
-        jun.attack(kevinke);
-        System.out.println(kevinke.health);
+
+        jun.howMany();
     }
 }

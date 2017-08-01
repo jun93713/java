@@ -8,4 +8,7 @@ public class Human {
         human.health -= strength;
     }
 
+    public void showHealth(){
+        System.out.println("current health is: " + health);
+    }
 }
