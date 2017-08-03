@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+    <breakfast>
+        <item category="entree">
+            <name>sausage croissant</name>
+            <description>
+                When Jack put sausage, a freshly cracked egg and American cheese
+                on a buttery croissant, it earned the coveted title: “the sausage,
+                freshly cracked egg and American cheese buttery croissant.” But
+                that wouldn’t fit on the menu. Or anywhere. Hence, the shorthand.
+            </description>
+            <price>$3.99</price>
+        </item>
+        <item category="entree">
+            <name>GRANDE SAUSAGE BREAKFAST BURRITO</name>
+            <description>
+                Your mouth better do some push-ups. Because this is a whole lot of
+                burrito with sausage, scrambled eggs, hash browns, bacon crumbles,
+                and shredded pepper jack cheese. Plus, cheddar cheese sauce and
+                creamy Sriracha sauce. And it’s all wrapped in a warm flour tortilla—with
+                a side of fire roasted salsa. Phew. That was a workout just saying all of that.
+            </description>
+            <price>$3.89</price>
+        </item>
+        <item category="drink">
+            <name>Milk</name>
+            <description>choice of Non-fat, low fat, and reduced fat</description>
+            <price>$0.99</price>
+        </item>
+        <item category="drink">
+            <name>Coffee</name>
+            <description>coffee is the best for every morning!</description>
+            <price>$0.99</price>
+        </item>
+    </breakfast>
+    <dinner>
+        <item category="entree">
+            <name>Rib eyes</name>
+            <description>you know what you want</description>
+            <price>$19.99</price>
+        </item>
+        <item category="entree">
+            <name>T-bone</name>
+            <description>tired of rib eyes? get some t-bone then.</description>
+            <price>$19.99</price>
+        </item>
+        <item category="entree">
+            <name>Japanese Kobe Steak</name>
+            <description>best steak in the world</description>
+            <price>$999.99</price>
+        </item>
+        <item category="drink">
+            <name>Iced water</name>
+            <description>sorry this is all we have.</description>
+            <price>$0.00</price>
+        </item>
+    </dinner>
+</menu>
