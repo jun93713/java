@@ -1,0 +1,22 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+div{
+    font-size: 0;
+}
+
+.pink, .blue{
+    display: inline-flex;
+    width: 49px;
+    height: 49px;
+}
+.pink{
+    background-color: plum;
+    /*border: 1px solid plum;*/
+}
+.blue{
+    background-color: blue;
+    /*border: 1px solid blue;*/
+}
