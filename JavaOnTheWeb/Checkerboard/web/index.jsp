@@ -24,8 +24,7 @@
     <% for (int j = 0; j < width; j ++){ %>
       <% if ((i + j) % 2 == 0) {%>
         <div class="pink"></div>
-      <% } %>
-      <% if ((i + j) % 2 == 1) { %>
+      <% } else { %>
         <div class="blue"></div>
       <% } %>
     <% } %>
