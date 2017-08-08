@@ -80,14 +80,14 @@
 	</form>
 	<h1>Activities</h1>
 	<div class="act">
-	<c:forEach var="act" items="${activities}">
-	<c:if test="${act.contains('lost')}">
-	<p class="lost">${act}</p>
-	</c:if>
-	<c:if test="${!act.contains('lost')}">
-	<p class="win">${act}</p>
-	</c:if>
-	</c:forEach>
+		<c:forEach var="act" items="${activities}">
+			<c:if test="${act.contains('lost')}">
+				<p class="lost">${act}</p>
+			</c:if>
+			<c:if test="${!act.contains('lost')}">
+				<p class="win">${act}</p>
+			</c:if>
+		</c:forEach>
 	</div>
 
 </body>
