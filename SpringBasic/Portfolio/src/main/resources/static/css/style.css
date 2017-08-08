@@ -1,0 +1,12 @@
+*{
+	text-align: center;
+}
+.box{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	border: 1px solid black;
+	vertical-align: top;
+	margin: 20px;
+	padding: 20px;
+}
