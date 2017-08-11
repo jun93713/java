@@ -17,20 +17,22 @@
 			<th>Version</th>
 			<th>action</th>
 		</tr>
-		<c:forEach var="lang" items="${langs}" varStatus="status">
+		<c:forEach var="lang" items="${langs}">
 			<tr>
-				<th><a href="/languages/${status.index }"><c:out value="${lang.name }"></c:out></a></th>
+				<th><a href="/languages/${lang.id}"><c:out value="${lang.name }"></c:out></a></th>
 				<th><c:out value="${lang.creator }"></c:out></th>
 				<th><c:out value="${lang.currentVersion }"></c:out></th>
 				<th>
-					<a href="/languages/delete/${status.index }">delete</a>
-					<a href="/languages/edit/${status.index }">edit</a>
+					<a href="/languages/delete/${lang.id}">delete</a>
+					<a href="/languages/edit/${lang.id}">edit</a>
 				</th>
 			</tr>
 		</c:forEach>
 	</table>
 	
 	<form:form method="POST" action="/language/new" modelAttribute="language">
+		<form:hidden path="id"/>
+	
 	    <form:label path="name">Name
 	    <form:errors path="name"/>
 	    <form:input path="name"/></form:label>

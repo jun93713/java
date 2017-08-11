@@ -14,7 +14,7 @@
 	<h1>${lang.name }</h1>
 	<h1>${lang.creator }</h1>
 	<h1>${lang.currentVersion }</h1>
-	<h2><a href="/languages/delete/${id}">delete</a></h2>
-	<h2><a href="/languages/edit/${id}">edit</a></h2>
+	<h2><a href="/languages/delete/${lang.id}">delete</a></h2>
+	<h2><a href="/languages/edit/${lang.id}">edit</a></h2>
 </body>
 </html>

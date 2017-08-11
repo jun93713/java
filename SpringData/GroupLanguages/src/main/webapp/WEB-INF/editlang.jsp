@@ -10,7 +10,7 @@
 <title>edit</title>
 </head>
 <body>
-	<form:form method="POST" action="/languages/edit/${id}" modelAttribute="language">
+	<form:form method="POST" action="/languages/edit/${lang.id}" modelAttribute="language">
 	    <form:label path="name">Name
 	    <form:errors path="name"/>
 	    <form:input path="name" value="${lang.name}"/></form:label>
