@@ -38,7 +38,7 @@ public class LookifyController {
 		if (result.hasErrors()) {
             return "index";
         }else{
-            service.addSong(song);;
+            service.addSong(song);
             return "redirect:/dashboard";
         }
 	}
