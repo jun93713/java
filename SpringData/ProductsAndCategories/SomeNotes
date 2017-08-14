@@ -1,0 +1,39 @@
+some notes on adding item in many-to-many relationship 
+only finished adding category to product.categories, too lazy to finish the rest.
+
+
+need both category id and product id to finish this?? there is maybe easier way.
+
+service.addCategoryToProduct(cateId, id);
+
+
+example:
+@Service
+1. to add a category, I need to get that product from db
+
+Product product = productRepo.findOne(id)
+
+2. get that category from db using category id.
+
+Category category = categoryRepo.findOneCatrgory(id);
+
+3. add category into categories in product LOCALLY(it happens in service but not saved in db yet)
+
+	product.categories.add(category)
+// product.categories is type List<Category> and List has method "add", List.add(obj)
+
+4. save this change
+	productRepo.save(product)
+	
+	
+combine the codes i get:
+		Product product = productRepo.findOne(id);
+		product.getCategories().add(categoryRepo.findOne(cateId));
+		productRepo.save(product);
+
+maybe in one line?:
+	productRepo.(productRepo.findOne(id).getCategories().add(categoryRepo.findOne(cateId)));
+	
+should work but too complicated to read.
+
+
