@@ -48,7 +48,6 @@ public class LalalaController {
 		if (result.hasErrors()) {
             return "newcategory";
         }else{
-        		
             service.newCategory(category);
             return "redirect:/";
         }
