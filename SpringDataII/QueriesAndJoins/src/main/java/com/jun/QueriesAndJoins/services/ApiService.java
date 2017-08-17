@@ -48,4 +48,8 @@ public class ApiService {
 	public List<City> task7(){
 		return countryRepository.task7();
 	}
+	
+	public List<Object[]> task8(){
+		return countryRepository.task8();
+	}
 }

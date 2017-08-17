@@ -29,7 +29,9 @@ public class ApiController {
 		//6
 		//model.addAttribute("countries", service.task6());
 		//7
-		model.addAttribute("cities", service.task7());
+		//model.addAttribute("cities", service.task7());
+		//8
+		model.addAttribute("countries", service.task8());
 		return "index";
 	}
 }

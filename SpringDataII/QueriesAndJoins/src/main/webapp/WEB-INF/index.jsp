@@ -9,20 +9,16 @@
 <title>Query</title>
 </head>
 <body>
+
 	<table>
 		<tr>
-			<th>country name</th>
-			<th>city name</th>
-			<th>district</th>
-			<th>population</th>
+			<th>continent</th>
+			<th>number of countries</th>
 		</tr>
-		<c:forEach var="city" items="${cities }">
+		<c:forEach var="obj" items="${countries }">
 			<tr>
-				<td>${city.country.name }</td>
-				<td>${city.name }</td>
-				<td>${city.district }</td>
-				<td>${city.population}</td>
-				
+				<td>${obj[0].continent }</td>
+				<td>${obj[1] }</td>
 			</tr>
     		</c:forEach>
 	

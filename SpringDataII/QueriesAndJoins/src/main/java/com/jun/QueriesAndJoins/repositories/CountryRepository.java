@@ -39,4 +39,8 @@ public interface CountryRepository extends CrudRepository<Country, Long> {
 	//7
 	@Query("SELECT c FROM City c JOIN c.country cc WHERE district='Buenos Aires' AND c.population > 500000")
 	List<City> task7();
+	
+	//8
+	@Query("SELECT c, COUNT(continent) FROM Country c GROUP BY continent ORDER BY COUNT(continent) DESC")
+	List<Object[]> task8();
 }
