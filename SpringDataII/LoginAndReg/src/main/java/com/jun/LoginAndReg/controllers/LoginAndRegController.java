@@ -51,14 +51,14 @@ public class LoginAndRegController {
         if(logout != null) {
             model.addAttribute("logoutMessage", "Logout Successfull!");
         }
-        return "loginPage.jsp";
+        return "loginandreg";
     }
 	
 	@RequestMapping("/dashboard")
     public String home(Principal principal, Model model) {
         String username = principal.getName();
         model.addAttribute("currentUser", loginAndRegService.findByEmail(username));
-        return "homePage.jsp";
+        return "dashboard";
     }
 	
 	

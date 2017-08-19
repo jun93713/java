@@ -1,13 +1,16 @@
-package com.jun.LoginAndReg.services;
+package com.jun.Events.services;
 
-import java.util.*;
+import com.jun.Events.models.User;
+import com.jun.Events.repositories.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.*;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import com.jun.LoginAndReg.models.User;
-import com.jun.LoginAndReg.repositories.UserRepository;
 @Service
 public class UserDetailsServiceImplementaion implements UserDetailsService {
 	private UserRepository userReoisitory;
@@ -17,7 +20,6 @@ public class UserDetailsServiceImplementaion implements UserDetailsService {
 	}
 	
 	
-
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userReoisitory.findByUsername(username);
@@ -26,7 +28,7 @@ public class UserDetailsServiceImplementaion implements UserDetailsService {
 			throw new UsernameNotFoundException("User not found");
 		}
 		
-		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), getAuthorities());
+		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthorities());
 	}
 
 	private List<GrantedAuthority> getAuthorities(){
@@ -34,4 +36,5 @@ public class UserDetailsServiceImplementaion implements UserDetailsService {
         
         return authorities;
     }
+
 }

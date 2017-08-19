@@ -24,6 +24,6 @@ public class LoginAndRegService {
 	}
 	
 	public User findByEmail(String email) {
-		return userRepository.findByEmail(email);
+		return userRepository.findByUsername(email);
 	}
 }
